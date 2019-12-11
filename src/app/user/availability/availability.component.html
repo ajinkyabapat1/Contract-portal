@@ -46,6 +46,27 @@
         </mat-select>
       </mat-form-field>
     </div>
+
+    <br><br>
+    <span><b>Visa Sponsorship Required?</b></span>
+    <div  class="auto-width" style="margin-left:290px;margin-top:-50px">
+    <!-- <mat-form-field >
+     
+        <mat-select [(value)]="selected" >
+          <mat-option>None</mat-option>
+          <mat-option value="India">India</mat-option>
+          <mat-option value="UK">UK</mat-option>
+          <mat-option value="Ireland">Ireland</mat-option>
+        </mat-select>
+      </mat-form-field> -->
+      <table>
+        <tr>
+          <td>India</td>
+          <td><mat-checkbox class="example-margin" name="name" [(ngModel)]="checked1" value="yes">YES</mat-checkbox></td>
+          <td><mat-checkbox class="example-margin" name="name1" [(ngModel)]="checked" value="no">NO</mat-checkbox></td>
+        </tr>
+      </table>
+    </div>
      
 
   </form>

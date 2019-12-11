@@ -1,7 +1,17 @@
 mat-slider {
     width: 400px;
+    margin-left: 80px;
   }
 
   .example-card{
       width:600px
   }
+
+  .auto-width
+    .mat-form-field {
+        width: auto !important;
+    }
+    .mat-select-value {
+        max-width: 100%;
+        width: auto;
+    }  

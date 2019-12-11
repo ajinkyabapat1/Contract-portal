@@ -33,6 +33,21 @@
      <span><b>Salary Expectation</b> <b> ${{" "+gridsize.value}}</b></span><br>
      <mat-slider #gridsize (change)="updateSetting($event)" step="5" min="10" max="1000" [value]="gridsize"></mat-slider>
     <!-- </div> -->
+    <br><br>
+    <span><b>Countries of Interest</b></span>
+    <div  class="auto-width" style="margin-left:290px;margin-top:-50px">
+    <mat-form-field >
+        <!-- <mat-label>Select Preferred Country </mat-label> -->
+        <mat-select [(value)]="selected" >
+          <mat-option>None</mat-option>
+          <mat-option value="India">India</mat-option>
+          <mat-option value="UK">UK</mat-option>
+          <mat-option value="Ireland">Ireland</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+     
+
   </form>
   </mat-card>
   </div>

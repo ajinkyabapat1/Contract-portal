@@ -25,8 +25,12 @@ export class AboutComponent implements OnInit {
       'email': [null, [Validators.required, Validators.pattern(emailregex)], this.checkInUseEmail],
       'name': [null, Validators.required],
       'password': [null, [Validators.required, this.checkPassword]],
-      'description': [null, [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
+      'description': [null, [Validators.required, Validators.minLength(5), Validators.maxLength(400)]],
       'validate': '',
+      'loc':[null,Validators.required],
+      'portfolio':[null,Validators.required],
+      'exp':[null,Validators.required],
+    
       PhoneNumber:new FormControl('',[Validators.pattern('[6-9]\\d{9}')]),
     });
   }

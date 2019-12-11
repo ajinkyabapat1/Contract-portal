@@ -1,3 +1,39 @@
-<p>
-  availability works!
-</p>
+
+<section class="new-training" fxLayout="row" fxLayoutAlign="center center">
+    <div class="container">
+        <mat-card  class="example-card" >
+<form #userForm="ngForm" >
+
+    <!-- <div class="row" > -->
+        <span><b>Availbility</b></span>
+      <div class="form-group" style="margin-top: 1px ;margin-bottom: -30px;height: 32px;margin-left:30px">
+
+        <!-- <div class="column" > -->
+
+          <mat-form-field class="example-full-width">
+            <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Choose a Start date"
+              name="startDate" [(ngModel)]="startDate" class="form-control" matNativeControl required
+              (onChange)="getStartDate($event.target.value)">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        <!-- </div> -->
+      </div>
+      <div class="form-group" style="padding-left:1cm; margin-left: 229px;">
+        <!-- <div class="column" > -->
+          <mat-form-field class="example-full-width1">
+            <input matInput [min]="startDate" [max]="maxDate1" [matDatepicker]="picker1"
+              placeholder="Choose an End date" name="endDate" [(ngModel)]="endDate" class="form-control"
+              matNativeControl required>
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+        <!-- </div> -->
+      </div>
+     <span><b>Salary Expectation</b> <b> ${{" "+gridsize.value}}</b></span><br>
+     <mat-slider #gridsize (change)="updateSetting($event)" step="5" min="10" max="1000" [value]="gridsize"></mat-slider>
+    <!-- </div> -->
+  </form>
+  </mat-card>
+  </div>
+  </section>

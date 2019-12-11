@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
@@ -23,7 +24,9 @@ import {
   MatDialogModule,
   MatTableModule,
   MatSortModule,
-  MatPaginatorModule
+  MatPaginatorModule,
+  MatSliderModule
+ 
 } from '@angular/material';
 import { SidenavListComponentComponent } from './navigation/sidenav-list-component/sidenav-list-component.component';
 import { HeaderComponentComponent } from './navigation/header-component/header-component.component';
@@ -44,6 +47,7 @@ import { AvailabilityComponent } from './user/availability/availability.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
+
     BrowserAnimationsModule,
     MatButtonModule,
   MatIconModule,
@@ -64,7 +68,9 @@ import { AvailabilityComponent } from './user/availability/availability.componen
   MatSortModule,
   MatPaginatorModule,
   FlexLayoutModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+FormsModule,
+MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
@@ -26,11 +27,19 @@ import {
 } from '@angular/material';
 import { SidenavListComponentComponent } from './navigation/sidenav-list-component/sidenav-list-component.component';
 import { HeaderComponentComponent } from './navigation/header-component/header-component.component';
+import { UserComponent } from './user/user.component';
+import { AboutComponent } from './user/about/about.component';
+import { SkillsComponent } from './user/skills/skills.component';
+import { AvailabilityComponent } from './user/availability/availability.component';
 @NgModule({
   declarations: [
     AppComponent,
     SidenavListComponentComponent,
-    HeaderComponentComponent
+    HeaderComponentComponent,
+    UserComponent,
+    AboutComponent,
+    SkillsComponent,
+    AvailabilityComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +63,8 @@ import { HeaderComponentComponent } from './navigation/header-component/header-c
   MatTableModule,
   MatSortModule,
   MatPaginatorModule,
-  FlexLayoutModule
+  FlexLayoutModule,
+  ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

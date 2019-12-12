@@ -25,7 +25,9 @@ import {
   MatTableModule,
   MatSortModule,
   MatPaginatorModule,
-  MatSliderModule
+  MatSliderModule,
+  MatChipsModule,
+  MatAutocompleteModule
  
 } from '@angular/material';
 import { SidenavListComponentComponent } from './navigation/sidenav-list-component/sidenav-list-component.component';
@@ -69,6 +71,8 @@ import { AvailabilityComponent } from './user/availability/availability.componen
   MatPaginatorModule,
   FlexLayoutModule,
   ReactiveFormsModule,
+  MatChipsModule,
+  MatAutocompleteModule,
 FormsModule,
 MatSliderModule
   ],

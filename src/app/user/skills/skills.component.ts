@@ -34,7 +34,7 @@ formGroup:FormGroup
     this.formGroup = this.fb.group({
      
      'description' :[null, [Validators.required, Validators.minLength(5), Validators.maxLength(400)]],
-     'skills':[null,Validators.required,Validators.minLength(1)]
+     'skills':[null]
     })
   }
 

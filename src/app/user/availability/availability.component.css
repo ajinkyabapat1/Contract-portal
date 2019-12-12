@@ -50,6 +50,7 @@ mat-slider {
         display: inline-block;
         padding: 8px 16px;
         background-color: rgb(234, 250, 221);
+        color: black;
       }
       
       .button1:hover {
@@ -88,7 +89,7 @@ mat-slider {
         color: black;
       }
     
-      .button1:disabled {
+      .button1 {
         text-decoration: none;
         display: inline-block;
         padding: 8px 16px;

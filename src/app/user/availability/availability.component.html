@@ -1,15 +1,11 @@
-
 <section class="new-training" fxLayout="row" fxLayoutAlign="center center">
-    <div class="container">
-        <mat-card  class="example-card" >
-<form #userForm="ngForm" >
+  <div class="container">
+    <mat-card class="example-card">
+      <form #userForm="ngForm">
 
-    <!-- <div class="row" > -->
+
         <span><b>Availbility</b></span>
-      <div class="form-group" style="margin-top: 1px ;margin-bottom: -30px;height: 32px;margin-left:30px">
-
-        <!-- <div class="column" > -->
-
+        <div class="form-group" style="margin-top: 1px ;margin-bottom: -30px;height: 32px;margin-left:30px">
           <mat-form-field class="example-full-width">
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Choose a Start date"
               name="startDate" [(ngModel)]="startDate" class="form-control" matNativeControl required
@@ -17,10 +13,10 @@
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
-        <!-- </div> -->
-      </div>
-      <div class="form-group" style="padding-left:1cm; margin-left: 229px;">
-        <!-- <div class="column" > -->
+          <!-- </div> -->
+        </div>
+        <div class="form-group" style="padding-left:1cm; margin-left: 229px;">
+          <!-- <div class="column" > -->
           <mat-form-field class="example-full-width1">
             <input matInput [min]="startDate" [max]="maxDate1" [matDatepicker]="picker1"
               placeholder="Choose an End date" name="endDate" [(ngModel)]="endDate" class="form-control"
@@ -28,48 +24,82 @@
             <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
             <mat-datepicker #picker1></mat-datepicker>
           </mat-form-field>
-        <!-- </div> -->
-      </div>
-     <span><b>Salary Expectation</b> <b> ${{" "+gridsize.value}}</b></span><br>
-     <mat-slider #gridsize (change)="updateSetting($event)" step="5" min="10" max="1000" [value]="gridsize"></mat-slider>
-    <!-- </div> -->
-    <br><br>
-    <span><b>Countries of Interest</b></span>
-    <div  class="auto-width" style="margin-left:290px;margin-top:-50px">
-    <mat-form-field >
-        <!-- <mat-label>Select Preferred Country </mat-label> -->
-        <mat-select [(value)]="selected" >
-          <mat-option>None</mat-option>
-          <mat-option value="India">India</mat-option>
-          <mat-option value="UK">UK</mat-option>
-          <mat-option value="Ireland">Ireland</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
 
-    <br><br>
-    <span><b>Visa Sponsorship Required?</b></span>
-    <div  class="auto-width" style="margin-left:290px;margin-top:-50px">
-    <!-- <mat-form-field >
-     
-        <mat-select [(value)]="selected" >
-          <mat-option>None</mat-option>
-          <mat-option value="India">India</mat-option>
-          <mat-option value="UK">UK</mat-option>
-          <mat-option value="Ireland">Ireland</mat-option>
-        </mat-select>
-      </mat-form-field> -->
-      <table>
-        <tr>
-          <td>India</td>
-          <td><mat-checkbox class="example-margin" name="name" [(ngModel)]="checked1" value="yes">YES</mat-checkbox></td>
-          <td><mat-checkbox class="example-margin" name="name1" [(ngModel)]="checked" value="no">NO</mat-checkbox></td>
-        </tr>
-      </table>
-    </div>
-     
+        </div>
+        <span><b>Salary Expectation</b> <b> ${{" "+gridsize.value}}</b></span><br>
+        <mat-slider #gridsize (change)="updateSetting($event)" step="5" min="10" max="1000" [value]="gridsize">
+        </mat-slider>
 
-  </form>
-  </mat-card>
+        <br><br>
+        <span><b>Countries of Interest</b></span>
+        <div class="auto-width" style="margin-left:290px;margin-top:-50px">
+          <mat-form-field>
+            <!-- <mat-label>Select Preferred Country </mat-label> -->
+            <mat-select [(value)]="selected">
+              <mat-option>None</mat-option>
+              <mat-option value="India">India</mat-option>
+              <mat-option value="UK">UK</mat-option>
+              <mat-option value="Ireland">Ireland</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <br><br>
+        <span><b>Preferred Position </b></span>
+        <div class="auto-width" style="margin-left:290px;margin-top:-50px">
+          <mat-form-field>
+
+            <mat-select [(value)]="selected">
+              <mat-option>None</mat-option>
+              <mat-option value="Software Developer ">Software Developer </mat-option>
+              <mat-option value="Software Tester">Software Tester</mat-option>
+              <mat-option value="Software Designer">Software Designer</mat-option>
+              <mat-option value="Software Analyst">Software Analyst</mat-option>
+              <mat-option value="Software Engineer">Software Engineer</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <span><b>Visa Sponsorship Required  </b></span>
+        <table style="margin-left: 320px; margin-top:-30px">
+          <tr>
+            <td>India</td>
+            <td>
+              <mat-checkbox class="example-margin" name="name" [(ngModel)]="checked1" value="yes" >YES</mat-checkbox>
+            </td>
+            
+          </tr>
+          <tr>
+              <td>UK</td>
+              <td>
+                <mat-checkbox class="example-margin" name="name" [(ngModel)]="checked2" value="yes">YES</mat-checkbox>
+              </td>
+              
+            </tr>
+            <tr>
+                <td>Ireland</td>
+                <td>
+                  <mat-checkbox class="example-margin" name="name" [(ngModel)]="checked3" value="yes">YES</mat-checkbox>
+                </td>
+                
+              </tr>
+        </table>
+        <span><h5 style="color: red;">CVUploading your CV will increase your chance to be found by recruiter by 75% Supported formats: Docx, PDF, maximum ﬁle size 2mb</h5></span>
+      
+          <input type='file' (change)="onSelectFile($event)">
+       
+
+        <br><br>
+        <!-- <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Submit
+            Form</button> -->
+        <div style="margin-top:20px; margin-left:140px">
+          <a href="#" class="previous"><button [disabled]="!userForm.valid" class="button2">&laquo;
+              Previous</button></a>&nbsp;&nbsp;&nbsp;
+          <a href="#" class="next"><button [disabled]="!userForm.valid" class="button1"> Submit</button></a>
+        </div>
+
+
+
+      </form>
+    </mat-card>
   </div>
-  </section>
+</section>

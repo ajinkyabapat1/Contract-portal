@@ -87,8 +87,8 @@
           <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Submit
             Form</button>
            <div style="margin-top:20px; margin-left:140px" >
-            <a href="#" class="previous">&laquo; Previous</a>&nbsp;&nbsp;&nbsp;
-            <a href="#" class="next">Next &raquo;</a>
+              <a href="#" class="previous" ><button [disabled]="!formGroup.valid" class="button2">&laquo; Previous</button></a>&nbsp;&nbsp;&nbsp;
+              <a href="#" class="next"  ><button [disabled]="!formGroup.valid" class="button1"> Next &raquo;</button></a>
         </div>
       </form>
     </mat-card>

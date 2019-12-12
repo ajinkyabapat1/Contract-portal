@@ -1,6 +1,11 @@
+<!-- <div>
+<form novalidate [formGroup]="checkoutForm">
+    <mat-form-field>
+        <input matInput type="text" placeholder='Full name' formControlName="fullName">
+      </mat-form-field> -->
 <mat-tab-group *ngIf="!ongoingTraining">
   <mat-tab label="ABOUT">
-    <app-about></app-about>
+    <app-about (formReady)="formInitialized('billing', $event)"></app-about>
   </mat-tab>
   <mat-tab label="SKILLS">
     <app-skills></app-skills>
@@ -9,4 +14,11 @@
     <app-availability></app-availability>
   </mat-tab>
 </mat-tab-group>
+
+<!-- </form>
+</div> -->
+<!-- <h2 class='mat-h2'>Form Value</h2>
+  <pre>
+    {{checkoutForm.value | json}}
+  </pre> -->
 

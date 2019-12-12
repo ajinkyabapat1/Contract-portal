@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-user',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  checkoutForm: FormGroup;
 
-  constructor() { }
+  constructor(private fb: FormBuilder) {}
+
 
   ngOnInit() {
+    this.checkoutForm = this.fb.group({
+      fullName: null
+    })
+  }
+
+  formInitialized(name: string, form: FormGroup) {
+    this.checkoutForm.setControl(name, form);
+    console.log(this.checkoutForm)
   }
 
 }

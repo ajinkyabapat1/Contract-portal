@@ -28,14 +28,15 @@
     height: 70px;
   }
 
-  a {
+  .button1:disabled {
     text-decoration: none;
     display: inline-block;
     padding: 8px 16px;
+    background-color: rgb(226, 250, 206);
   }
   
-  a:hover {
-    background-color: #ddd;
+  .button1:hover {
+    background-color: rgb(140, 233, 53);
     color: black;
   }
   
@@ -47,4 +48,16 @@
   .next {
     background-color: #4CAF50;
     color: white;
+  }
+
+  .button2:disabled {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color:#fcc1c1;
+  }
+  
+  .button2:hover {
+    background-color: #fa6565;
+    color: black;
   }

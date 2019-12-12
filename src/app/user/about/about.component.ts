@@ -1,19 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
-import { Observable }    from 'rxjs';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  url = '';
+  url: any = '';
   formGroup: FormGroup;
   titleAlert: string = 'This field is required';
   post: any = '';
 
   constructor(private formBuilder: FormBuilder) { }
-
+  @Output() formReady = new EventEmitter<FormGroup>()
   ngOnInit() {
     this.createForm();
     this.setChangeValidate()
@@ -27,11 +27,11 @@ export class AboutComponent implements OnInit {
       'password': [null, [Validators.required, this.checkPassword]],
       'description': [null, [Validators.required, Validators.minLength(5), Validators.maxLength(400)]],
       'validate': '',
-      'loc':[null,Validators.required],
-      'portfolio':[null,Validators.required],
-      'exp':[null,Validators.required],
-    
-      PhoneNumber:new FormControl('',[Validators.pattern('[6-9]\\d{9}')]),
+      'loc': [null, Validators.required],
+      'portfolio': [null, Validators.required],
+      'exp': [null, Validators.required],
+
+      PhoneNumber: new FormControl('', [Validators.pattern('[6-9]\\d{9}')]),
     });
   }
 
@@ -84,9 +84,10 @@ export class AboutComponent implements OnInit {
 
   onSubmit(post) {
     this.post = post;
+    this.formReady.emit(this.formGroup);
   }
 
- 
+
   onSelectFile(event) {
     if (event.target.files && event.target.files[0]) {
       var reader = new FileReader();
@@ -94,9 +95,11 @@ export class AboutComponent implements OnInit {
       reader.readAsDataURL(event.target.files[0]); // read file as data url
 
       reader.onload = (event) => { // called once readAsDataURL is completed
-        this.url = event.target.result;
+        this.url = event
       }
     }
   }
+
+
 
 }

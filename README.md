@@ -2,6 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
+# Developer
+
+Ajinkya Bapat 
+ajinkyabapat1@gmail.com
+
+
+# Stepts to set up the project 
+
+
+1. Install VS code Install Node js Install Angular CLI : npm install -g @angular/cli once done with all 
+ installation ,run following commands
+2. ng update
+3. npm install
+4. install --save-dev @angular-devkit/build-angular
+5. npm start
+6. By default project will run of localhost:4200/
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

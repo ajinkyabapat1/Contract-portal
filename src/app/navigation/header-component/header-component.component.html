@@ -8,20 +8,20 @@
     <a routerLink="/">Contract <span>Portal</span></a>
   </div>
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
-      <ul fxLayout fxLayoutGap="10px" class="navigation-items">
-          <li *ngIf="!isAuth">
-              <a routerLink="/">Registration Form</a>
-            </li>
-        <li *ngIf="!isAuth">
-          <a routerLink="/signup">Terms of Service</a>
-        </li>
-        <li *ngIf="!isAuth">
-          <a routerLink="/login">Privacy Policy</a>
-        </li>
-       
-        <li *ngIf="isAuth">
-          <a style="cursor: pointer" (click)="onLogout()">Logout</a>
-        </li>
-      </ul>
+    <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+      <li >
+        <a routerLink="/">Registration Form</a>
+      </li>
+      <li >
+        <a routerLink="/signup">Terms of Service</a>
+      </li>
+      <li >
+        <a routerLink="/login">Privacy Policy</a>
+      </li>
+
+      <li >
+        <a style="cursor: pointer" (click)="onLogout()">Logout</a>
+      </li>
+    </ul>
   </div>
 </mat-toolbar>

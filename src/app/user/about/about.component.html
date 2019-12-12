@@ -12,7 +12,7 @@
         </mat-form-field>
 
         <mat-form-field class="form-element">
-            
+
           <input matInput placeholder="First Name" formControlName="name">
           <mat-error *ngIf="!name.valid && name.touched">
             {{ titleAlert }}
@@ -28,10 +28,6 @@
             {{ getErrorPassword() }}
           </mat-error>
         </mat-form-field>
-
-        <!-- <div class="form-element">
-      <mat-checkbox formControlName="validate" value="1">Name min. 3 characters</mat-checkbox>
-    </div> -->
         <mat-form-field class="form-element">
           <input matInput placeholder="Phone number" formControlName="PhoneNumber" [errorStateMatcher]="matcher"
             [(ngModel)]="PhoneNumber" [required]="name=='ram'" maxlength="10">
@@ -48,7 +44,7 @@
         <mat-form-field class="form-element">
           <textarea matInput placeholder="Description" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"
             formControlName="description" #textCount></textarea>
-            <mat-hint>Describe Your Work Experience</mat-hint>
+          <mat-hint>Describe Your Work Experience</mat-hint>
           <mat-error *ngIf="!formGroup.controls['description'].valid && formGroup.controls['description'].touched">
             Required field, must be between 5 and 400 characters.
           </mat-error>
@@ -62,38 +58,39 @@
             <mat-form-field class="form-element">
               <input matInput placeholder="Year of Experience" formControlName="exp">
               <mat-error *ngIf="!formGroup.controls['exp'].valid && formGroup.controls['exp'].touched">
-                  It should be numeric.
-                </mat-error>
-            </mat-form-field> 
+                It should be numeric.
+              </mat-error>
+            </mat-form-field>
           </div>
           <div class="col-4">
-          <mat-form-field class="form-element">
+            <mat-form-field class="form-element">
               <input matInput placeholder="Website/Portfolio" formControlName="portfolio" required>
-             
+
             </mat-form-field>
           </div>
           <div class="col-4">
             <mat-form-field class="form-element">
               <input matInput placeholder="Current Location" formControlName="loc" required #loc>
-          
+
             </mat-form-field>
           </div>
         </div>
         <img [src]="url" height="200"> <br /><br>
 
 
-        <input type='file' accept="image/gif, image/jpeg" (change)="onSelectFile($event)" >
+        <input type='file' accept="image/gif, image/jpeg" (change)="onSelectFile($event)">
 
-       
-       <br><br>
-          <!-- <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Submit
-            Form</button> -->
-           <div style="margin-top:20px; margin-left:140px" >
-              <a href="#" class="previous" ><button [disabled]="!formGroup.valid" class="button2">&laquo; Previous</button></a>&nbsp;&nbsp;&nbsp;
-              <a routerLink="/skills" class="next"  ><button [disabled]="!formGroup.valid" class="button1"> Next &raquo;</button></a>
-              </div>
-              <h6 *ngIf="!formGroup.valid" style="color: red;">Form is not completed </h6>
-              <h6 *ngIf="formGroup.valid" style="color: green;">Form is completed.. Click on Next  </h6>
+
+        <br><br>
+        
+        <div style="margin-top:20px; margin-left:140px">
+          <a href="#" class="previous"><button [disabled]="!formGroup.valid" class="button2">&laquo;
+              Previous</button></a>&nbsp;&nbsp;&nbsp;
+          <a routerLink="/skills" class="next"><button [disabled]="!formGroup.valid" class="button1"> Next
+              &raquo;</button></a>
+        </div>
+        <h6 *ngIf="!formGroup.valid" style="color: red;">Form is not completed </h6>
+        <h6 *ngIf="formGroup.valid" style="color: green;">Form is completed.. Click on Next </h6>
       </form>
     </mat-card>
 

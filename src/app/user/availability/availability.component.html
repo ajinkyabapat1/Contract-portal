@@ -13,10 +13,10 @@
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
-          <!-- </div> -->
+
         </div>
         <div class="form-group" style="padding-left:1cm; margin-left: 229px;">
-          <!-- <div class="column" > -->
+
           <mat-form-field class="example-full-width1">
             <input matInput [min]="startDate" [max]="maxDate1" [matDatepicker]="picker1"
               placeholder="Choose an End date" name="endDate" [(ngModel)]="endDate" class="form-control"
@@ -33,8 +33,8 @@
         <br><br>
         <span><b>Countries of Interest</b></span>
         <div class="auto-width" style="margin-left:290px;margin-top:-50px">
-          <mat-form-field >
-            <!-- <mat-label>Select Preferred Country </mat-label> -->
+          <mat-form-field>
+
             <mat-select [(value)]="selected" formControlName="country">
               <mat-option>None</mat-option>
               <mat-option value="India">India</mat-option>
@@ -57,49 +57,55 @@
               <mat-option value="Software Analyst">Software Analyst</mat-option>
               <mat-option value="Software Engineer">Software Engineer</mat-option>
             </mat-select>
-           
+
           </mat-form-field>
         </div><br>
-        <span><b>Visa Sponsorship Required  </b></span>
-        <table style="margin-left: 320px; margin-top:-30px" >
+        <span><b>Visa Sponsorship Required </b></span>
+        <table style="margin-left: 320px; margin-top:-30px">
           <tr>
             <td>India</td>
             <td>
-              <mat-checkbox formControlName="visa" class="example-margin" name="name" [(ngModel)]="checked1" value="yes" >YES</mat-checkbox>
+              <mat-checkbox formControlName="visa" class="example-margin" name="name" [(ngModel)]="checked1"
+                value="yes">YES</mat-checkbox>
             </td>
-            
+
           </tr>
           <tr>
-              <td>UK</td>
-              <td>
-                <mat-checkbox formControlName="visa" class="example-margin" name="name" [(ngModel)]="checked2" value="yes">YES</mat-checkbox>
-              </td>
-              
-            </tr>
-            <tr>
-                <td>Ireland</td>
-                <td>
-                  <mat-checkbox formControlName="visa" class="example-margin" name="name" [(ngModel)]="checked3" value="yes">YES</mat-checkbox>
-                </td>
-                
-              </tr>
-             
+            <td>UK</td>
+            <td>
+              <mat-checkbox formControlName="visa" class="example-margin" name="name" [(ngModel)]="checked2"
+                value="yes">YES</mat-checkbox>
+            </td>
+
+          </tr>
+          <tr>
+            <td>Ireland</td>
+            <td>
+              <mat-checkbox formControlName="visa" class="example-margin" name="name" [(ngModel)]="checked3"
+                value="yes">YES</mat-checkbox>
+            </td>
+
+          </tr>
+
         </table>
-        <span><h5 style="color: rgb(87, 15, 129);">CVUploading your CV will increase your chance to be found by recruiter by 75% Supported formats: Docx, PDF, maximum ﬁle size 2mb</h5></span>
-      
-          <input formControlName="file"  type='file' accept="application/pdf,application/msword" (change)="onSelectFile($event)">
-        
+        <span>
+          <h5 style="color: rgb(87, 15, 129);">CVUploading your CV will increase your chance to be found by recruiter by
+            75% Supported formats: Docx, PDF, maximum ﬁle size 2mb</h5>
+        </span>
+
+        <input formControlName="file" type='file' accept="application/pdf,application/msword"
+          (change)="onSelectFile($event)">
+
 
         <br><br>
-        <!-- <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Submit
-            Form</button> -->
+
         <div style="margin-top:20px; margin-left:140px">
-          <a routerLink="/skills" class="previous" ><button [disabled]="!formGroup.valid" class="button2">&laquo;
+          <a routerLink="/skills" class="previous"><button [disabled]="!formGroup.valid" class="button2">&laquo;
               Previous</button></a>&nbsp;&nbsp;&nbsp;
-          <a href="#" class="next"><button [disabled]="!formGroup.valid" class="button1" > Submit</button></a>
+          <a href="#" class="next"><button [disabled]="!formGroup.valid" class="button1"> Submit</button></a>
         </div>
         <h6 *ngIf="!formGroup.valid" style="color: red;">Form is not completed </h6>
-        <h6 *ngIf="formGroup.valid" style="color: green;">Form is completed.. Click on Next  </h6>
+        <h6 *ngIf="formGroup.valid" style="color: green;">Form is completed.. Click on Next </h6>
 
 
       </form>

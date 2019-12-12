@@ -18,7 +18,7 @@
           <br>
           <h3 style="color: indigo">Add Your skills... </h3>
           <mat-form-field class="example-chip-list">
-              <mat-chip-list #chipList aria-label="Fruit selection">
+              <mat-chip-list #chipList aria-label="Skill Selection" formControlName="skills">
                 <mat-chip
                   *ngFor="let fruit of fruits"
                   [selectable]="selectable"
@@ -28,7 +28,7 @@
                   <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
                 </mat-chip>
                 <input
-                  placeholder="New fruit..."
+                  placeholder="New Skills..."
                   #fruitInput
                   [formControl]="fruitCtrl"
                   [matAutocomplete]="auto"
@@ -42,12 +42,15 @@
                   {{fruit}}
                 </mat-option>
               </mat-autocomplete>
+              <mat-error *ngIf="!formGroup.controls['skills'].valid && formGroup.controls['skills'].touched">
+                  You Must have Minimum Three Skills set.
+                </mat-error>
             </mat-form-field>
         <br><br>
-        <div style="margin-top:20px; margin-left:140px">
-          <a href="#" class="previous"><button [disabled]="!formGroup.valid" class="button2">&laquo;
+        <div style="margin-top:20px; margin-left:200px">
+          <a routerLink="/about" class="previous"><button [disabled]="!formGroup.valid" class="button2">&laquo;
               Previous</button></a>&nbsp;&nbsp;&nbsp;
-          <a routerLink="/skills" class="next"><button [disabled]="!formGroup.valid" class="button1"> Next
+          <a routerLink="/avail" class="next"><button [disabled]="!formGroup.valid" class="button1"> Next
               &raquo;</button></a>
         </div>
         <h6 *ngIf="!formGroup.valid" style="color: red;">Form is not completed </h6>

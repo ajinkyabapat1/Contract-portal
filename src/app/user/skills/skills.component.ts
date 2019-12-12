@@ -17,8 +17,8 @@ export class SkillsComponent implements OnInit {
   separatorKeysCodes: number[] = [ENTER, COMMA];
   fruitCtrl = new FormControl();
   filteredFruits: Observable<string[]>;
-  fruits: string[] = ['Lemon'];
-  allFruits: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
+  fruits: string[] = ['Angular '];
+  allFruits: string[] = ['React', 'Flutter', 'Docker', 'Java', 'Oracle SQL','HTML','CSS','Javascript','Python'];
 
   @ViewChild('fruitInput') fruitInput: ElementRef<HTMLInputElement>;
   @ViewChild('auto') matAutocomplete: MatAutocomplete;
@@ -33,7 +33,8 @@ formGroup:FormGroup
   ngOnInit() {
     this.formGroup = this.fb.group({
      
-     'description' :[null, [Validators.required, Validators.minLength(5), Validators.maxLength(400)]]
+     'description' :[null, [Validators.required, Validators.minLength(5), Validators.maxLength(400)]],
+     'skills':[null,Validators.required,Validators.minLength(1)]
     })
   }
 

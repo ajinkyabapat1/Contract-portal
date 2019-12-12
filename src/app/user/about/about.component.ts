@@ -29,7 +29,7 @@ export class AboutComponent implements OnInit {
       'validate': '',
       'loc': [null, Validators.required],
       'portfolio': [null, Validators.required],
-      'exp': [null, Validators.required],
+      'exp': [null, Validators.required,Validators.pattern('[0-9]\\d{2}')],
 
       PhoneNumber: new FormControl('', [Validators.pattern('[6-9]\\d{9}')]),
     });

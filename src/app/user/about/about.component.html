@@ -48,7 +48,7 @@
         <mat-form-field class="form-element">
           <textarea matInput placeholder="Description" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"
             formControlName="description" #textCount></textarea>
-
+            <mat-hint>Describe Your Work Experience</mat-hint>
           <mat-error *ngIf="!formGroup.controls['description'].valid && formGroup.controls['description'].touched">
             Required field, must be between 5 and 400 characters.
           </mat-error>
@@ -61,7 +61,9 @@
           <div class="col-4">
             <mat-form-field class="form-element">
               <input matInput placeholder="Year of Experience" formControlName="exp">
-             
+              <mat-error *ngIf="!formGroup.controls['exp'].valid && formGroup.controls['exp'].touched">
+                  It should be numeric.
+                </mat-error>
             </mat-form-field> 
           </div>
           <div class="col-4">

@@ -2,11 +2,28 @@
   <div class="container" *ngIf="!post; else forminfo" novalidate>
 
     <mat-card class="example-card">
-      <form [formGroup]="form" (ngSubmit)="submit(form.value)" class="form">
-          
+      <form [formGroup]="formGroup" (ngSubmit)="submit(form.value)" class="form">
 
-            
-            
+        <mat-form-field class="form-element">
+          <mat-hint>Describe Your Professional Certifications</mat-hint>
+          <textarea matInput placeholder="Professional Certifications" matTextareaAutosize matAutosizeMinRows="2"
+            matAutosizeMaxRows="5" formControlName="description" #textCount></textarea>
+
+          <mat-error *ngIf="!formGroup.controls['description'].valid && formGroup.controls['description'].touched">
+            Required field, must be between 5 and 400 characters.
+          </mat-error>
+        </mat-form-field>
+        <span style="text-align: right;font-size: 10px;margin-left:400px;margin-bottom:20px ">{{textCount.value.length}}
+          of 400 characters</span>
+        <br><br>
+        <div style="margin-top:20px; margin-left:140px">
+          <a href="#" class="previous"><button [disabled]="!formGroup.valid" class="button2">&laquo;
+              Previous</button></a>&nbsp;&nbsp;&nbsp;
+          <a routerLink="/skills" class="next"><button [disabled]="!formGroup.valid" class="button1"> Next
+              &raquo;</button></a>
+        </div>
+        <h6 *ngIf="!formGroup.valid" style="color: red;">Form is not completed </h6>
+        <h6 *ngIf="formGroup.valid" style="color: green;">Form is completed.. Click on Next </h6>
       </form>
     </mat-card>
   </div>

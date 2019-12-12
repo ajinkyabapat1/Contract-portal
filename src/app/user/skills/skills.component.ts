@@ -7,12 +7,12 @@ import { FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-  form: FormGroup;
-  constructor(private fb: FormBuilder) {
+formGroup:FormGroup
+  constructor(private fb:FormBuilder) {
   }
 
   ngOnInit() {
-    this.form = this.fb.group({
+    this.formGroup = this.fb.group({
      
      'description' :[null, [Validators.required, Validators.minLength(5), Validators.maxLength(400)]]
     })

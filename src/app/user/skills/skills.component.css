@@ -28,39 +28,6 @@
     height: 70px;
   }
 
-  .button1:disabled {
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: rgb(226, 250, 206);
-  }
-  
-  .button1:hover {
-    background-color: rgb(140, 233, 53);
-    color: black;
-  }
-  
-  .previous {
-    background-color: #fa6565;
-    color: black;
-  }
-  
-  .next {
-    background-color: #4CAF50;
-    color: white;
-  }
-
-  .button2:disabled {
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 16px;
-    background-color:#fcc1c1;
-  }
-  
-  .button2:hover {
-    background-color: #fa6565;
-    color: black;
-  }
 
   mat-form-field.mat-form-field {
     width: 100%;
@@ -77,4 +44,56 @@
 
 .example-card{
     width:600px !important
+}
+
+
+.button1:disabled {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: rgb(234, 250, 221);
+}
+
+.button1:hover {
+  background-color: rgb(116, 14, 163) !important;
+  color: white;
+}
+
+.previous {
+  background-color: #fa6565;
+  color: black;
+}
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2:disabled {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color:#f53a3a;
+}
+
+.button2:hover {
+  background-color: rgb(116, 14, 163);
+  color: white;
+}
+
+
+.button2 {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color:#f8c2c2;
+  color: black;
+}
+
+.button1:disabled {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: green;
+  color: white;
 }

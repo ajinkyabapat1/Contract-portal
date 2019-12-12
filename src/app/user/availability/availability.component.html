@@ -9,7 +9,7 @@
           <mat-form-field class="example-full-width">
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Choose a Start date"
               name="startDate" [(ngModel)]="startDate" class="form-control" matNativeControl required
-              (onChange)="getStartDate($event.target.value)">
+              (onChange)="getStartDate($event.target.value)" [ngModelOptions]="{standalone: true}">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
@@ -20,7 +20,7 @@
           <mat-form-field class="example-full-width1">
             <input matInput [min]="startDate" [max]="maxDate1" [matDatepicker]="picker1"
               placeholder="Choose an End date" name="endDate" [(ngModel)]="endDate" class="form-control"
-              matNativeControl required>
+              matNativeControl required [ngModelOptions]="{standalone: true}">
             <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
             <mat-datepicker #picker1></mat-datepicker>
           </mat-form-field>
@@ -94,9 +94,9 @@
         <!-- <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Submit
             Form</button> -->
         <div style="margin-top:20px; margin-left:140px">
-          <a routerLink="/about" class="previous" ><button [disabled]="!formGroup.valid" class="button2">&laquo;
+          <a routerLink="/skills" class="previous" ><button [disabled]="!formGroup.valid" class="button2">&laquo;
               Previous</button></a>&nbsp;&nbsp;&nbsp;
-          <a href="#" class="next"><button [disabled]="!formGroup.valid" class="button1"> Submit</button></a>
+          <a href="#" class="next"><button [disabled]="!formGroup.valid" class="button1" > Submit</button></a>
         </div>
         <h6 *ngIf="!formGroup.valid" style="color: red;">Form is not completed </h6>
         <h6 *ngIf="formGroup.valid" style="color: green;">Form is completed.. Click on Next  </h6>

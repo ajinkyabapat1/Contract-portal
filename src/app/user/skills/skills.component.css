@@ -1,0 +1,80 @@
+.fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+  
+  .form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .form-element {
+    padding: 5px 0px 25px 2px;
+    width: 100%;
+  }
+  
+  .button {
+    width: 100%;
+  }
+
+  img {
+    border-radius: 60%;
+    height: 70px;
+  }
+
+  .button1:disabled {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: rgb(226, 250, 206);
+  }
+  
+  .button1:hover {
+    background-color: rgb(140, 233, 53);
+    color: black;
+  }
+  
+  .previous {
+    background-color: #fa6565;
+    color: black;
+  }
+  
+  .next {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .button2:disabled {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color:#fcc1c1;
+  }
+  
+  .button2:hover {
+    background-color: #fa6565;
+    color: black;
+  }
+
+  mat-form-field.mat-form-field {
+    width: 100%;
+  }
+
+  .mat-stroked-button {
+    border: 1px solid violet;
+    padding: 0px 4px;
+    line-height: 25px;
+    margin-left: 200px;
+    margin-top: -28px;
+    background-color: violet
+}
+
+.example-card{
+    width:600px !important
+}

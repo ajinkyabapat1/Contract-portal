@@ -1,3 +1,13 @@
-<p>
-  skills works!
-</p>
+<section class="new-training" fxLayout="row" fxLayoutAlign="center center">
+  <div class="container" *ngIf="!post; else forminfo" novalidate>
+
+    <mat-card class="example-card">
+      <form [formGroup]="form" (ngSubmit)="submit(form.value)" class="form">
+          
+
+            
+            
+      </form>
+    </mat-card>
+  </div>
+</section>

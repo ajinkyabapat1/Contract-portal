@@ -80,16 +80,18 @@
         <img [src]="url" height="200"> <br /><br>
 
 
-        <input type='file' (change)="onSelectFile($event)" >
+        <input type='file' accept="image/gif, image/jpeg" (change)="onSelectFile($event)" >
 
        
        <br><br>
-          <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Submit
-            Form</button>
+          <!-- <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Submit
+            Form</button> -->
            <div style="margin-top:20px; margin-left:140px" >
               <a href="#" class="previous" ><button [disabled]="!formGroup.valid" class="button2">&laquo; Previous</button></a>&nbsp;&nbsp;&nbsp;
-              <a href="#" class="next"  ><button [disabled]="!formGroup.valid" class="button1"> Next &raquo;</button></a>
-        </div>
+              <a routerLink="/skills" class="next"  ><button [disabled]="!formGroup.valid" class="button1"> Next &raquo;</button></a>
+              </div>
+              <h6 *ngIf="!formGroup.valid" style="color: red;">Form is not completed </h6>
+              <h6 *ngIf="formGroup.valid" style="color: green;">Form is completed.. Click on Next  </h6>
       </form>
     </mat-card>
 

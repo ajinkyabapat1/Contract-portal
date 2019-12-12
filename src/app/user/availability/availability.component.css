@@ -49,12 +49,12 @@ mat-slider {
         text-decoration: none;
         display: inline-block;
         padding: 8px 16px;
-        background-color: rgb(226, 250, 206);
+        background-color: rgb(234, 250, 221);
       }
       
       .button1:hover {
-        background-color: rgb(140, 233, 53);
-        color: black;
+        background-color: rgb(116, 14, 163) !important;
+        color: white;
       }
       
       .previous {
@@ -71,10 +71,27 @@ mat-slider {
         text-decoration: none;
         display: inline-block;
         padding: 8px 16px;
-        background-color:#fcc1c1;
+        background-color:#f53a3a;
       }
       
       .button2:hover {
-        background-color: #fa6565;
+        background-color: rgb(116, 14, 163);
+        color: white;
+      }
+    
+      
+      .button2 {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+        background-color:#f8c2c2;
         color: black;
+      }
+    
+      .button1:disabled {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: green;
+        color: white;
       }
